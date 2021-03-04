@@ -1,11 +1,12 @@
 
 import React from 'react';
-//import { Route } from 'react-router-dom';
+// import { Switch, Route } from 'react-router-dom';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-//import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 
-//import { Switch, Route, Redirect } from "react-router-dom"
-// import Home from "./Home";
+
+import { Switch, Route, Redirect } from "react-router-dom"
+ import Home from "./Home";
 // import About from "./About";
 // import Contact from "./Contact";
 // import Courses from "./Courses";
@@ -19,31 +20,41 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 // import Navbar from "./Navbar";
 // import Footer from "./Footer";
 import Register from "./Register"
+import Covid19Info from './Covid19Info';
+import CommunityImmu from "./CommunityImmu";
+import DontWaitVaccinate from "./DontWaitVaccinate";
+import VaccinesWork from "./VaccinesWork";
+import Contact from "./Contact";
 
 const App = () => {
     return ( 
      
     <>
-    <Register/>
+    {/* <Register/> */}
     {/* <Navbar /> */}
    
-    {/* <Switch>
+    <Switch>
         <Route exact path="/" component={Home}/>
-        <Route exact path="/About" component={About}/>
+        <Route exact path="/Register" component={Register}/>
+         {/* <Route exact path="/About" component={About}/>
         <Route exact path="/Contact" component={Contact}/>
         <Route exact path="/Courses" component={Courses}/>
         <Route exact path="/Faculty" component={Faculty}/>
         <Route exact path="/SignUp" component={SignUp}/>
-        <Route exact path="/Login" component={Login}/>
-        <Route exact path="/Pgdac" component={Pgdac}/>
-        <Route exact path="/Pgdmc" component={Pgdmc}/>
+        <Route exact path="/Login" component={Login}/> */}
+         <Route exact path="/Covid19Info" component={Covid19Info}/>
+         <Route exact path="/CommunityImmu" component={CommunityImmu}/>
+         <Route exact path="/DontWaitVaccinate" component={DontWaitVaccinate}/>
+         <Route exact path="/VaccinesWork" component={VaccinesWork}/>
+         <Route exact path="/Contact" component={Contact}/>
+        {/* <Route exact path="/Pgdmc" component={Pgdmc}/>
         <Route exact path="/Pgdia" component={Pgdia}/>
-        <Route exact path="/Pgdbda" component={Pgdbda}/>
-        <Redirect to="/" />
+        <Route exact path="/Pgdbda" component={Pgdbda}/>  */}
+        <Redirect to="/" /> 
        
 
-         </Switch>
-         <Footer /> */}
+         </Switch> 
+         {/* {/* <Footer />  */}
     </>
 
     );
